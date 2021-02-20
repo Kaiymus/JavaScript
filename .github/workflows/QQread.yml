@@ -15,7 +15,7 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id
     env:
         
-        QQreadurl_refreshTOKEN: ${{ secrets.QQreadurl_refreshTOKEN }}
+        QQreadurl: ${{ secrets.QQreadurl}}
   
     steps:
       - name: Checkout
@@ -26,12 +26,12 @@ jobs:
         with:
           node-version: 12.x
       - name: npm install
-        if: env.QQreadurl_refreshTOKEN
+        if: env.QQreadurl
         run: |
           cd ~/JavaScript
           npm install
       - name: '运行 【QQ阅读】'
-        if: env.QQreadurl_refreshTOKEN
+        if: env.QQreadurl
         run: |
           cd ~/JavaScript
           node Task/QQread.js
