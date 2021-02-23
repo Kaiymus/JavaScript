@@ -32,7 +32,7 @@ jobs:
           cd ~/JavaScript
           npm install
       - name: '运行 【步步宝】'
-        if: env.XP_refreshTOKEN
+        if: env.BBB_bububaoTOKEN
         run: |
           cd ~/JavaScript
           node Task/bububao.js
