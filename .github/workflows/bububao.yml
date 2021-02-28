@@ -34,7 +34,7 @@ jobs:
       - name: '运行 【步步宝】'
         if: env.BBB_bububaoTOKEN
         run: |
-          cd ~/JavaScript
+          cd ~/ziye66666
           node Task/bububao.js
         env:
           
