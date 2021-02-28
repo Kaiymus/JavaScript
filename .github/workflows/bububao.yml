@@ -6,7 +6,7 @@ name: 步步宝
 on:
   workflow_dispatch:
   schedule:
-     - cron: '0,30 * * * * '
+     - cron: ‘0,30 * * * * ‘
   watch:
     types: started
 jobs:
@@ -21,7 +21,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/Kaiymus/ziye66666.git ~/ziye66666
+          git clone https://github.com/Kaiymus/JavaScript.git ~/JavaScript
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
@@ -31,10 +31,10 @@ jobs:
         run: |
           cd ~/JavaScript
           npm install
-      - name: '运行 【步步宝】'
+      - name: ‘运行 【步步宝】’
         if: env.BBB_bububaoTOKEN
         run: |
-          cd ~/ziye66666
+          cd ~/JavaScript
           node Task/bububao.js
         env:
           
